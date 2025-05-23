@@ -1,6 +1,6 @@
 site_name: SaaS Multi-Tenancy Architecture
 theme:
-  name: material
+  name: readthedocs
 nav:
   - Home: index.md
   - Architecture:
