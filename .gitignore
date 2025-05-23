@@ -1,0 +1,20 @@
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.env/
+.venv/
+venv/
+
+# MkDocs site output
+site/
+
+# Node dependencies
+node_modules/
+
+# IDE and editor directories
+.vscode/
+.idea/
+
+# macOS file system
+.DS_Store

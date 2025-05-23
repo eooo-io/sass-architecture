@@ -1,0 +1,12 @@
+site_name: SaaS Multi-Tenancy Architecture
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Architecture:
+      - Overview: architecture.md
+      - Components: components.md
+      - Implementation: implementation.md
+      - Infrastructure: infrastructure.md
+  - Diagrams:
+      - JWT Payload: diagrams/jwt-payload.md

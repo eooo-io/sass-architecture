@@ -1,0 +1,11 @@
+replicaCount: 2
+image:
+  repository: yourorg/api-gateway
+  tag: latest
+  pullPolicy: IfNotPresent
+service:
+  type: ClusterIP
+  port: 80
+ingress:
+  enabled: false
+resources: {}
