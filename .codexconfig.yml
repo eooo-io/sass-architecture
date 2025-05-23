@@ -1,0 +1,13 @@
+{
+  "autoConfirm": true,
+  "quiet": true,
+  "contextWindowSize": 8000,
+  "maxFiles": 100,
+  "ignore": [
+    "node_modules/**",
+    "dist/**",
+    ".env*",
+    "*.log",
+    "terraform/**/*.tfstate"
+  ]
+}

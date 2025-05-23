@@ -35,12 +35,18 @@ A complete reference architecture for building a modern, scalable, and secure Sa
 | Observability          | Prometheus, Grafana, OpenTelemetry |
 | Documentation          | MkDocs, Mermaid, JsonCrack       |
 
-## 🛠️ Getting Started
+## Getting Started
+
+Ensure Docker and Docker Compose are installed to run the development environment.
 
 ```bash
-# Start documentation locally
+# Start documentation locally (via pip)
 pip install mkdocs-material
 mkdocs serve
+
+# Or with Docker Compose
+docker-compose up --build
+# Access the documentation at http://localhost:8000
 
 # Explore Helm charts
 cd helm-charts/api-gateway

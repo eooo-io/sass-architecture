@@ -1,0 +1,51 @@
+# Node and TypeScript noise
+node_modules/
+dist/
+build/
+*.log
+*.lock
+.env
+.env.*
+
+# Python/mkdocs
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.mypy_cache/
+*.egg-info/
+site/
+*.sqlite3
+
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Helm
+helm-charts/*/charts/
+helm-charts/*/templates/*.bak
+helm-charts/*/values.override.yaml
+
+# Diagrams (large or generated)
+*.png
+*.svg
+*.pdf
+diagrams/exported/
+
+# Docs site output
+/docs/site/
+*.html
+
+# OS / IDE junk
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.iml
+
+# Zip archives
+*.zip
+
+# Ignore Codex's own logs/output
+.codex/
