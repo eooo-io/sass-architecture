@@ -1,20 +1,174 @@
+# Python
 __pycache__/
 *.py[cod]
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+bin/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+.pytest_cache/
+.coverage
+htmlcov/
 
 # Virtual environments
-.env/
+.env
 .venv/
 venv/
+ENV/
 
-# MkDocs site output
-site/
-
-# Node dependencies
+# Node.js
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.npm
+.yarn
+.pnp.*
+.next
+.nuxt
+.vuepress/dist
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+.lock-wscript
+.yarn-integrity
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# IDE and editor directories
-.vscode/
+# TypeScript
+*.tsbuildinfo
+.tscache/
+*.js.map
+
+# Build outputs
+dist/
+build/
+out/
+.output/
+
+# IDE and editors
 .idea/
-
-# macOS file system
+.vscode/
+*.swp
+*.swo
 .DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.sublime-workspace
+*.sublime-project
+.project
+.classpath
+.settings/
+*.iml
+*.iws
+.idea_modules/
+.vs/
+.claude.config
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
+.jest/
+jest.config.local.js
+
+# Docker
+.docker/
+docker-compose.override.yml
+*.env
+
+# Kubernetes
+kubeconfig
+*.kubeconfig
+.kube/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraformrc
+terraform.rc
+.terraform.lock.hcl
+crash.log
+
+# Documentation
+site/
+docs/_build/
+.mkdocs/
+
+# Helm
+charts/*/charts/
+charts/*/requirements.lock
+*.tgz
+
+# Monitoring
+prometheus/data/
+grafana/data/
+
+# Database
+*.sqlite3
+*.db
+*.rdb
+dump.rdb
+
+# Certificates and keys
+*.pem
+*.key
+*.crt
+*.cer
+*.der
+*.priv
+*.pub
+
+# Misc
+.cache/
+.temp/
+.tmp/
+*.bak
+*.swp
+*.swo
+*~
+.env.*
+!.env.example
+
+# Mobile (React Native/Expo)
+.expo/
+*.jks
+*.p8
+*.p12
+*.mobileprovision
+*.orig.*
+web-build/
+.metro-health-check*
+
+# OpenTelemetry
+otel-collector-config.yaml.local
+
+# Stripe
+.stripe/
+stripe.exe
+.env.stripe
