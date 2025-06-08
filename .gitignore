@@ -116,7 +116,6 @@ terraform.rc
 crash.log
 
 # Documentation
-site/
 docs/_build/
 .mkdocs/
 
