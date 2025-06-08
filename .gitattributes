@@ -1,0 +1,182 @@
+# Auto detect text files and perform LF normalization
+* text=auto eol=lf
+
+# Source code
+*.css text diff=css
+*.htm text diff=html
+*.html text diff=html
+*.js text
+*.jsx text
+*.ts text
+*.tsx text
+*.json text
+*.yml text
+*.yaml text
+*.md text diff=markdown
+*.mdx text diff=markdown
+*.py text diff=python
+*.java text diff=java
+*.rb text diff=ruby
+*.php text diff=php
+*.go text diff=golang
+*.sql text
+*.graphql text
+
+# Documentation
+*.ipynb text
+*.tex text diff=tex
+*.pdf binary
+*.doc binary
+*.docx binary
+*.ppt binary
+*.pptx binary
+*.xls binary
+*.xlsx binary
+
+# Docker
+Dockerfile text
+*.dockerfile text
+docker-compose*.yml text
+.dockerignore text
+
+# Scripts
+*.bash text eol=lf
+*.fish text eol=lf
+*.sh text eol=lf
+*.zsh text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Configs
+*.cnf text
+*.conf text
+*.config text
+*.ini text
+*.lock text -diff
+package-lock.json text -diff
+yarn.lock text -diff
+pnpm-lock.yaml text -diff
+
+# RC files
+*.*rc text
+.editorconfig text
+.env text
+.gitattributes text
+.gitconfig text
+.gitignore text
+.gitkeep text
+
+# Graphics
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text
+*.eps binary
+
+# Audio
+*.kar binary
+*.m4a binary
+*.mid binary
+*.midi binary
+*.mp3 binary
+*.ogg binary
+*.ra binary
+
+# Video
+*.3gpp binary
+*.3gp binary
+*.as binary
+*.asf binary
+*.asx binary
+*.avi binary
+*.fla binary
+*.flv binary
+*.m4v binary
+*.mng binary
+*.mov binary
+*.mp4 binary
+*.mpeg binary
+*.mpg binary
+*.ogv binary
+*.swc binary
+*.swf binary
+*.webm binary
+
+# Archives
+*.7z binary
+*.gz binary
+*.jar binary
+*.rar binary
+*.tar binary
+*.zip binary
+
+# Fonts
+*.ttf binary
+*.eot binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+
+# Executables
+*.exe binary
+*.pyc binary
+*.so binary
+*.dll binary
+*.dylib binary
+
+# Terraform
+*.tf text
+*.tfvars text
+*.tfstate text
+*.tfstate.backup text
+
+# Helm
+*.tpl text
+Chart.yaml text
+values.yaml text
+
+# Kubernetes
+*.yaml text
+*.yml text
+
+# Node specific
+.nvmrc text
+.node-version text
+.npmrc text
+
+# Python specific
+*.pxd text diff=python
+*.py3 text diff=python
+*.pyw text diff=python
+*.pyx text diff=python
+*.pyz text diff=python
+*.pyi text diff=python
+*.db binary
+*.p binary
+*.pkl binary
+*.pickle binary
+*.pyc binary export-ignore
+*.pyo binary export-ignore
+*.pyd binary
+
+# Jupyter notebook
+*.ipynb text
+
+# Exclude files from exporting
+.gitattributes export-ignore
+.gitignore export-ignore
+.gitkeep export-ignore
+
+# Treat all Go files in this repo as binary, with no git magic updating
+# line endings. Windows users contributing to Go will need to use a
+# modern version of git and editors capable of LF line endings.
+*.go -text diff=golang
+
+# Linguist language overrides
+*.ipynb linguist-documentation
+docs/* linguist-documentation
+*.md linguist-detectable=true
+*.sql linguist-detectable=true
