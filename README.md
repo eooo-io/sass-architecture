@@ -36,8 +36,48 @@ A complete reference architecture for building a modern, scalable, and secure Sa
 | Observability          | Prometheus, Grafana, OpenTelemetry |
 | Documentation          | MkDocs, Mermaid, JsonCrack       |
 
-## Local Development with Docker
+## Architectural Reference
 
+```mermaid
+graph TD
+  A[App Shell] --> B1[Routing Layer]
+  A --> B2[State Management]
+  A --> B3[UI Components]
+
+  B1 --> C1[Page Modules]
+  C1 --> D1[HomePage]
+  C1 --> D2[Dashboard]
+  C1 --> D3[Settings]
+
+  B2 --> C2[Stores]
+  C2 --> E1[Auth Store]
+  C2 --> E2[User Store]
+  C2 --> E3[Billing Store]
+
+  B3 --> C3[Design System]
+  C3 --> F1[Buttons]
+  C3 --> F2[Modals]
+  C3 --> F3[Form Elements]
+
+  A --> Z[Utils/Services]
+  Z --> Z1[API Client]
+  Z --> Z2[Validation Logic]
+  Z --> Z3[Error Handling]
+
+  %% Backend interaction
+  E1 --> G1[REST API Endpoints]
+  E2 --> G1
+  E3 --> G1
+  D1 --> G1
+  D2 --> G1
+  D3 --> G1
+
+  %% Grouping backend conceptually
+  subgraph "Backend API Layer"
+    G1
+  end
+```
+## Local Development with Docker
 ### Prerequisites
 
 - Docker Engine 24.0.0 or later
