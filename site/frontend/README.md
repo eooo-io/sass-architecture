@@ -1,24 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SaaS Frontend
+
+A modern, responsive frontend for the SaaS multi-tenancy platform built with Next.js, TypeScript, and Tailwind CSS.
+
+## Features
+
+### Authentication & Authorization
+- **SignupForm**: Complete registration with email, password, name, and company fields
+- **ForgotPasswordForm**: Password recovery with email verification
+- **ResetPasswordForm**: Secure password reset with token validation
+- **Protected Routes**: Route protection with `withAuth` HOC
+- **Auth Middleware**: Global route protection middleware
+- **Auth State Management**: Zustand-based authentication state management
+
+### Dashboard
+- **Layout**: Responsive dashboard layout with:
+  - Dynamic sidebar navigation
+  - User menu
+  - Mobile-responsive design
+- **Pages**:
+  - **Main Dashboard**: Stats cards and activity feed
+  - **Profile**: User profile management
+  - **Settings**: Notification and security preferences
+  - **Analytics**: Business metrics and charts
+  - **Team**: Team member management with invite system
+
+### Components
+- **Common**:
+  - LoadingSpinner: Reusable loading indicator
+  - ErrorBoundary: Global error handling
+- **Forms**:
+  - Formik integration for form handling
+  - Yup validation schemas
+  - Accessible form controls
+- **UI Elements**:
+  - Modern design with Tailwind CSS
+  - Headless UI components
+  - Responsive layouts
+
+## Tech Stack
+- **Framework**: Next.js 13
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **State Management**: Zustand
+- **Form Handling**: Formik + Yup
+- **UI Components**: Headless UI
+- **Icons**: Heroicons
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
+2. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
+```
+src/
+├── components/
+│   ├── auth/
+│   │   ├── SignupForm.tsx
+│   │   ├── ForgotPasswordForm.tsx
+│   │   ├── ResetPasswordForm.tsx
+│   │   └── withAuth.tsx
+│   ├── common/
+│   │   ├── LoadingSpinner.tsx
+│   │   └── ErrorBoundary.tsx
+│   └── layouts/
+│       └── DashboardLayout.tsx
+├── hooks/
+│   └── useAuth.ts
+├── pages/
+│   └── dashboard/
+│       ├── index.tsx
+│       ├── profile.tsx
+│       ├── settings.tsx
+│       ├── analytics.tsx
+│       └── team.tsx
+└── middleware.ts
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Development Guidelines
+- Use TypeScript for all new components
+- Follow the existing component structure
+- Maintain responsive design
+- Keep accessibility in mind
+- Add proper error handling
+- Use loading states for async operations
+
+## Authentication Flow
+1. User signs up with email, password, name, and company
+2. Protected routes check auth state via `withAuth` HOC
+3. Global middleware handles route protection
+4. Auth state managed via Zustand store
+
+## Available Scripts
+- `npm run dev`: Start development server
+- `npm run build`: Build for production
+- `npm run start`: Start production server
+- `npm run lint`: Run ESLint
+- `npm run type-check`: Run TypeScript checks
 
 ## Learn More
 
